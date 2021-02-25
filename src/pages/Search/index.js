@@ -139,6 +139,7 @@ function Search() {
                     return (
                         <SearchResults
                             title={book.volumeInfo.title}
+                            authors={book.volumeInfo.authors}
                             description={book.volumeInfo.description}
                             image={
                                 book.volumeInfo.imageLinks === undefined
