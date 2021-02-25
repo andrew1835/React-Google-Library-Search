@@ -149,12 +149,7 @@ function Search() {
                         />
                     )
                 })}
-                <SearchResults
-                // title={title}
-                // description={description}
-                // image={image}
-                // link={link}
-                />
+
             </Container>
         </div>
     );
