@@ -4,6 +4,10 @@ import Container from "../../components/Container";
 import SearchForm from "../../components/SearchForm";
 import SearchResults from "../../components/SearchResults";
 import Alert from "../../components/Alert";
+import DeleteBtn from "../../components/DeleteBtn";
+import { Link } from "react-router-dom";
+import { List, ListItem } from "../../components/List";
+
 
 function Search() {
     const [search, setSearch] = useState("");
@@ -13,11 +17,28 @@ function Search() {
     // const [description, setDescription] = useState("");
     // const [image, setImage] = useState("");
     // const [link, setLink] = useState("");
+    const [formObject, setFormObject] = useState({})
     const [error, setError] = useState("");
 
     useEffect(() => {
-        document.title = "Google Library Search"
-    });
+        loadBooks()
+    }, [])
+
+    // Loads all books and sets them to books
+    function loadBooks() {
+        API.getBooks()
+            .then(res =>
+                setBooks(res.data)
+            )
+            .catch(err => console.log(err));
+    };
+
+    // Deletes a book from the database with a given id, then reloads books from the db
+    function deleteBook(id) {
+        API.deleteBook(id)
+            .then(res => loadBooks())
+            .catch(err => console.log(err));
+    }
 
     const handleInputChange = event => {
         setSearch(event.target.value);
@@ -50,6 +71,19 @@ function Search() {
 
             })
             .catch(err => setError(err));
+    }
+
+    const handleSaveBook = event => {
+        event.preventDefault();
+        if (formObject.title && formObject.author) {
+            API.saveBook({
+                title: formObject.title,
+                author: formObject.author,
+                synopsis: formObject.synopsis
+            })
+                .then(res => loadBooks())
+                .catch(err => console.log(err));
+        }
     }
 
 
