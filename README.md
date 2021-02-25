@@ -1,70 +1,25 @@
-# Getting Started with Create React App
+# Google Books Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## What, Why, and HOW
+With this assignment, I was motivated to finish up the bootcamp strong by creating a fullstack MERN application with React. I knew it would be a challenge, but it proved to be even a little trickier than I had anticipated. I've always found front-end to be significantly easier than back-end, and so a part of me was dreading this assignment. As of this point, I'm still not able to fix a bug on the back end. For some reason, I'm able to seed items into the database, but those items aren't appearing on my application. I will do my best to fix this ASAP, but in case this assignment is graded immediately after the due date, I thought I'd make a note of my struggle with completing the back-end. Other than that, creating this application was a lot of fun. I called on the Google Library API correctly and have a working search functionality. To do this (as well as to do the back-end), I:
+1. Created a new react app 
+2. Pseudo coded so that I knew how to set up my files/folders
+3. Figured out how to call upon the Google Library API
+4. Called upon the Google Library API to populate the page with search results based on the user's search
+5. Created seed data for the database
+6. Created all the routes and API calls for the database
+7. Attempted to populate the "Saved" page with the items from the database, however, was unable to do so
 
-## Available Scripts
+Although I've ran into a road block with this assignment, I'm really excited to finish it up. I know I'm 90% of the way there, and will get some assistance tomorrow in order to make the final push. The two things I must do in order to fully complete this assignment are:
+1. Figure out why the "Saved" page isn't being populated with my database items
+2. Make sure that the "Save" button is adding items to the database
 
-In the project directory, you can run:
+# Links
+Link to GitHub repo: https://github.com/andrew1835/React-Google-Library-Search
+<br>
+Link to deployed application: https://andrew-google-library-react.herokuapp.com/
 
-### `npm start`
+# Screenshot
+This screenshot shows what the home/search page looks like after searching "Game of Thrones"
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src = "./src/components/Images/GoogleLibrary.jpg" alt = "Home page with results for 'Game of Thrones'">

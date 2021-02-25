@@ -4,9 +4,7 @@ import Container from "../../components/Container";
 import SearchForm from "../../components/SearchForm";
 import SearchResults from "../../components/SearchResults";
 import Alert from "../../components/Alert";
-import DeleteBtn from "../../components/DeleteBtn";
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../../components/List";
+
 
 
 function Search() {
@@ -34,11 +32,7 @@ function Search() {
     };
 
     // Deletes a book from the database with a given id, then reloads books from the db
-    function deleteBook(id) {
-        API.deleteBook(id)
-            .then(res => loadBooks())
-            .catch(err => console.log(err));
-    }
+
 
     const handleInputChange = event => {
         setSearch(event.target.value);
@@ -78,8 +72,10 @@ function Search() {
         if (formObject.title && formObject.author) {
             API.saveBook({
                 title: formObject.title,
-                author: formObject.author,
-                synopsis: formObject.synopsis
+                authors: formObject.author,
+                description: formObject.description,
+                image: formObject.image,
+                link: formObject.link
             })
                 .then(res => loadBooks())
                 .catch(err => console.log(err));
@@ -171,17 +167,22 @@ function Search() {
                 />
                 {books.map(book => {
                     return (
-                        <SearchResults
-                            title={book.volumeInfo.title}
-                            authors={book.volumeInfo.authors}
-                            description={book.volumeInfo.description}
-                            image={
-                                book.volumeInfo.imageLinks === undefined
-                                    ? ""
-                                    : `${book.volumeInfo.imageLinks.thumbnail}`
-                            }
-                            link={book.volumeInfo.infoLink}
-                        />
+                        <div>
+                            <SearchResults
+                                title={book.volumeInfo.title}
+                                authors={book.volumeInfo.authors}
+                                description={book.volumeInfo.description}
+                                image={
+                                    book.volumeInfo.imageLinks === undefined
+                                        ? ""
+                                        : `${book.volumeInfo.imageLinks.thumbnail}`
+                                }
+                                link={book.volumeInfo.infoLink}
+                                disabled={!(formObject.author && formObject.title)}
+                                handleSaveBook={handleSaveBook}
+
+                            />
+                        </div>
                     )
                 })}
 
