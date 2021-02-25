@@ -18,6 +18,8 @@ Although I've ran into a road block with this assignment, I'm really excited to 
 Link to GitHub repo: https://github.com/andrew1835/React-Google-Library-Search
 <br>
 Link to deployed application: https://andrew-google-library-react.herokuapp.com/
+<br>
+Link to updated portfolio: https://andrewreactportfolio.herokuapp.com/
 
 # Screenshot
 This screenshot shows what the home/search page looks like after searching "Game of Thrones"
