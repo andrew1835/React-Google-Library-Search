@@ -179,7 +179,7 @@ function Search() {
                                         : `${book.volumeInfo.imageLinks.thumbnail}`
                                 }
                                 link={book.volumeInfo.infoLink}
-                                disabled={!(formObject.author && formObject.title)}
+                            // disabled={!(formObject.author && formObject.title)}
                             // handleSaveBook={handleSaveBook}
 
                             />
