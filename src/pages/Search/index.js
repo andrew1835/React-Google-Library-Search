@@ -26,8 +26,9 @@ function Search() {
     function loadBooks() {
         API.getBooks()
             .then(res =>
-                setBooks(res.data)
+                setBooks(res.data),
             )
+
             .catch(err => console.log(err));
     };
 

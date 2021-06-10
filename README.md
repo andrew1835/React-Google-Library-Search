@@ -11,8 +11,8 @@ With this assignment, I was motivated to finish up the bootcamp strong by creati
 7. Attempted to populate the "Saved" page with the items from the database, however, was unable to do so
 
 Although I've ran into a road block with this assignment, I'm really excited to finish it up. I know I'm 90% of the way there, and will get some assistance tomorrow in order to make the final push. The two things I must do in order to fully complete this assignment are:
-1. Figure out why the "Saved" page isn't being populated with my database items
-2. Make sure that the "Save" button is adding items to the database
+1. Figure out why the "Saved" page isn't being populated with my database items.
+2. Make sure that the "Save" button is adding items to the database.
 
 # Links
 Link to GitHub repo: https://github.com/andrew1835/React-Google-Library-Search
