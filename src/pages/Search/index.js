@@ -18,19 +18,21 @@ function Search() {
     const [formObject, setFormObject] = useState({})
     const [error, setError] = useState("");
 
-    useEffect(() => {
-        loadBooks()
-    }, [])
+    // TODO: Commented out the bottom three lines
+    // useEffect(() => {
+    //     loadBooks()
+    // }, [])
 
     // Loads all books and sets them to books
-    function loadBooks() {
-        API.getBooks()
-            .then(res =>
-                setBooks(res.data),
-            )
+    // TODO: Commented out the below function
+    // function loadBooks() {
+    //     API.getBooks()
+    //         .then(res =>
+    //             setBooks(res.data),
+    //         )
 
-            .catch(err => console.log(err));
-    };
+    //         .catch(err => console.log(err));
+    // };
 
     // Deletes a book from the database with a given id, then reloads books from the db
 
@@ -179,7 +181,7 @@ function Search() {
                                         : `${book.volumeInfo.imageLinks.thumbnail}`
                                 }
                                 link={book.volumeInfo.infoLink}
-                            // disabled={!(formObject.author && formObject.title)}
+                                disabled={!(formObject.author && formObject.title)}
                             // handleSaveBook={handleSaveBook}
 
                             />
