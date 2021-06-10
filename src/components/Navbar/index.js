@@ -23,14 +23,14 @@ function Navbar() {
                             Search
             </Link>
                     </li>
-                    <li className="nav-item">
+                    {/* <li className="nav-item">
                         <Link
                             to="/saved"
                             className={window.location.pathname === "/saved" ? "nav-link active" : "nav-link"}
                         >
                             Saved
             </Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </nav>
