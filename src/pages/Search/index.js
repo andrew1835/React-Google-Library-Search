@@ -67,21 +67,21 @@ function Search() {
             })
             .catch(err => setError(err));
     }
-
-    const handleSaveBook = event => {
-        event.preventDefault();
-        if (formObject.title && formObject.author) {
-            API.saveBook({
-                title: formObject.title,
-                authors: formObject.author,
-                description: formObject.description,
-                image: formObject.image,
-                link: formObject.link
-            })
-                .then(res => loadBooks())
-                .catch(err => console.log(err));
-        }
-    }
+        // TODO: This was a function you commented out when you commented out handleSaveBook function call at the bottom of this page
+        // const handleSaveBook = event => {
+        //     event.preventDefault();
+        //     if (formObject.title && formObject.author) {
+        //         API.saveBook({
+        //             title: formObject.title,
+        //             authors: formObject.author,
+        //             description: formObject.description,
+        //             image: formObject.image,
+        //             link: formObject.link
+        //         })
+        //             .then(res => loadBooks())
+        //             .catch(err => console.log(err));
+        //     }
+        // }
 
 
         // const handleFormSubmit = event => {
@@ -180,7 +180,7 @@ function Search() {
                                 }
                                 link={book.volumeInfo.infoLink}
                                 disabled={!(formObject.author && formObject.title)}
-                                handleSaveBook={handleSaveBook}
+                            // handleSaveBook={handleSaveBook}
 
                             />
                         </div>
